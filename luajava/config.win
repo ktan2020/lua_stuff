@@ -1,0 +1,26 @@
+#############################################################
+#Windows
+LUA_DIR= lua-5.1
+LUA_LIBDIR= $(LUA_DIR)\lib
+LUA_INCLUDES= $(LUA_DIR)\include
+JDK= $(JAVA_HOME)
+
+LIB_LUA= lua.lib
+
+INCS= -I"$(JDK)/include" -I"$(JDK)/include/win32" -I"$(LUA_INCLUDES)"
+CFLAGS= -nologo -DWIN32 $(INCS) -Fosrc\C\\ -MD
+
+CC= cl
+
+
+#########################################################
+VERSION= 1.1
+
+PKG= luajava-$(VERSION)
+JAR_FILE= $(PKG).jar
+SO_FILE= $(PKG).dll
+DIST_DIR= $(PKG)
+PKG_LIB= $(PKG).lib
+
+# $Id: config.win,v 1.2 2007-03-15 21:28:02 carregal Exp $
+
